@@ -1,1 +1,1 @@
-test
+from chatexchange.client import Client
