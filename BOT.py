@@ -1,8 +1,8 @@
 from chatexchange.client import Client
-import os
+from os import environ
 
-email = os.environ['EMAIL']
-password = os.environ['PASSWORD']
+email = environ['EMAIL']
+password = environ['PASSWORD']
 se_chat = Client('stackoverflow.com')
 se_chat.login(email, password)
 room = se_chat.get_room('227446')
