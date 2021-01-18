@@ -3,9 +3,9 @@ import os
 
 email = os.environ['EMAIL']
 password = os.environ['PASSWORD']
-se_chat = Client(os.environ['CLIENT'])
+se_chat = Client('stackoverflow.com')
 se_chat.login(email, password)
-room = se_chat.get_room(os.environ['ROOM'])
+room = se_chat.get_room('227446')
 
 def on_event(event, _):
     if event.data['event_type'] == 1:
