@@ -10,6 +10,5 @@ def on_event(event, _):
     #Make a bot similar to Smokey
 room.join()
 room.watch_socket(on_event)
-room.send_message('@ppw Are you here?! lol ;D ;)')
 while True:
   pass
