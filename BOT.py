@@ -11,7 +11,7 @@ def on_event(event, _):
     if event.data['event_type']:
         msg = event.message.content_source
         if msg.lower().startswith('@reopenBot '):
-        # Make a bot similar to Smokey
+            # Make a bot similar to Smokey
         
 room.join()
 room.watch_socket(on_event)
