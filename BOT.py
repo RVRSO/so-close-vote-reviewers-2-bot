@@ -10,8 +10,8 @@ room = se_chat.get_room(os.environ['ROOM'])
 def on_event(event, _):
     if event.data['event_type']:
         msg = event.message.content_source
-        if msg.lower().startswith('@reopenBot '):
-            # Make a bot similar to Smokey
+        if msg.lower().startswith('rpb ') or msg.lower.startswith('!!/'):
+            # Make a bot like Smokey
         
 room.join()
 room.watch_socket(on_event)
