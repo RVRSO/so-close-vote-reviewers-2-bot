@@ -7,10 +7,15 @@ se_chat = Client(os.environ['CLIENT'])
 se_chat.login(email, password)
 room = se_chat.get_room(os.environ['ROOM'])
 
+ALIVE_MSG = [
+    'Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee',
+    'Watching this endless list of new questions *never* gets boring', 'Kinda sorta',
+    'You should totally drop that and use jQuery', r'¯\\_(ツ)\_/¯', '... good question',
+]
+
 def run(command):
     if command == 'alive':
-        alive_replys = ["Yes"] # Add some replys.
-        return random.choice(alive_replys)
+        return random.choice(ALIVE_MSG)
     else:
         room.send_message("No such command '{0}'".format(command))
 
