@@ -22,7 +22,7 @@ def run(command):
 def on_event(event, _):
     if event.data['event_type']:
         msg = event.message.content_source
-        if msg.lower().startswith('rpb ') or msg.lower.startswith('!!/') or msg.lower().startswith('@reopenbot '):
+        if msg.lower().startswith('rpb ') or msg.lower.startswith('!!/'):
             # Make a bot like Smokey
             event.message.reply(run(msg[3:]))
             
